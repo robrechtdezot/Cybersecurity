@@ -1,0 +1,8 @@
+FIREJAIL SANDBOX TEMPLATE
+
+Sandbox Firefox:
+    firejail --net=none --private firefox
+Sandbox with Tor routing:
+    proxychains firejail --noprofile firefox
+
+Write firejail profile for apps in ~/.config/firejail/yourapp.profile.

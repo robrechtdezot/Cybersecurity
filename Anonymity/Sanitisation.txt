@@ -1,0 +1,43 @@
+sanitize.sh — Metadata Cleaner Script
+    Requirements:
+        Install these tools once:
+            
+            SCRIPT:
+                sudo apt update
+                sudo apt install -y exiftool mat2 rename ffmpeg
+
+        exiftool: deeply cleans metadata
+        mat2: powerful tool for various formats (PDF, DOC, etc)
+        rename: to optionally randomize filenames
+        ffmpeg: for audio/video re-encoding with stripped metadata        
+
+
+    Usage:
+        SCRIPT: 
+                chmod +x sanitize.sh
+                ./sanitize.sh /path/to/your/files
+
+        Script = Sanitize.sh
+            Features
+                Feature	            Enabled by default?	    Notes
+                Strip EXIF metadata	        ✅	          Via exiftool
+                Clean office files	        ✅	          .pdf, .docx, .odt, etc via mat2
+                Strip video/audio	        ✅	          via ffmpeg -map_metadata -1
+                Wipe timestamps	            ✅             Touches all files to epoch 0
+                Random filenames	        ❌	          Enable by setting RAND_NAMES=true
+    
+
+    Testing:
+        # Create a test dir
+        mkdir test-sanitize && cd test-sanitize
+
+        # Add sample files
+        cp ~/Pictures/*.jpg .
+        cp ~/Downloads/sample.pdf .
+
+        # Run the script
+        ~/sanitize.sh .
+
+    Verify with:
+        exiftool *.jpg
+        mat2 --show *.pdf

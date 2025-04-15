@@ -1,0 +1,22 @@
+BROWSER HARDENING TEMPLATE (FIREFOX)
+
+Use Firefox ESR, or install LibreWolf
+    Step 1: Open about:config
+    Step 2: Set:
+                privacy.resistFingerprinting = true
+                privacy.firstparty.isolate = true
+                media.peerconnection.enabled = false
+                network.cookie.cookieBehavior = 1
+                network.http.referer.XOriginPolicy = 2
+                network.http.referer.XOriginTrimmingPolicy = 2
+                webgl.disabled = true
+    Step 3: Disable:
+                WebRTC
+                Telemetry
+                Location services
+    Step 4: Extensions:
+                uBlock Origin
+                NoScript
+                CanvasBlocker
+                ClearURLs
+                Cookie AutoDelete

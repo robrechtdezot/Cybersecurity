@@ -37,3 +37,13 @@ OPSEC BEHAVIOR
     Never reuse usernames or data from your real identity
     Don’t login to personal accounts or use personal habits
     Always assume someone is watching: plan for metadata leaks
+
+EXTRA'S
+    Optional enhancements
+        Testing Tools:
+            https://browserleaks.com
+            https://dnsleaktest.com
+            https://ipleak.net
+        OPSEC Training:
+            Use Tails or Whonix when maximum deniability is needed.
+            Don’t just hide—blend in. Anonymity is often broken by standing out.

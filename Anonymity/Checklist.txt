@@ -1,66 +1,39 @@
 ANONYMITY CHECKLIST FOR KALI LINUX
 PRE-BOOT
-
-Use live boot or encrypted disk (preferably Full Disk Encryption with LUKS)
-
-Secure BIOS/UEFI (disable boot from USB/CD, set BIOS password)
-
-Consider air-gapped Kali VM for highest opsec
-
+    Use live boot or encrypted disk (preferably Full Disk Encryption with LUKS)
+    Secure BIOS/UEFI (disable boot from USB/CD, set BIOS password)
+    Consider air-gapped Kali VM for highest opsec
     Use non-persistent storage if full deniability is needed (Tails style)
 
 SYSTEM-LEVEL CHANGES
-
-Spoof hostname
-
-Spoof MAC address (random each boot)
-
-Spoof timezone and locale
-
-Disable mDNS, UPnP, Bluetooth, and unnecessary services
-
+    Spoof hostname
+    Spoof MAC address (random each boot)
+    Spoof timezone and locale
+    Disable mDNS, UPnP, Bluetooth, and unnecessary services
     Wipe RAM on shutdown (if applicable)
 
 NETWORK ANONYMITY
-
-Always use VPN + Tor (VPN first, Tor after)
-
-Kill switch on VPN
-
-DNS over HTTPS or DNSCrypt
-
-Block all outbound traffic by default (UFW or iptables)
-
+    Always use VPN + Tor (VPN first, Tor after)
+    Kill switch on VPN
+    DNS over HTTPS or DNSCrypt
+    Block all outbound traffic by default (UFW or iptables)
     Test for leaks (IP, DNS, WebRTC, etc.)
 
 TOOLS & PRACTICES
-
-Use proxychains for tools like nmap, curl, wget
-
-Use firejail to sandbox browsers and apps
-
-Use whoami-project to manage spoofing (after verifying its behavior)
-
-Use Tor Browser or hardened Firefox with privacy extensions
-
-Avoid real email, usernames, fingerprinting
-
+    Use proxychains for tools like nmap, curl, wget
+    Use firejail to sandbox browsers and apps
+    Use whoami-project to manage spoofing (after verifying its behavior)
+    Use Tor Browser or hardened Firefox with privacy extensions
+    Avoid real email, usernames, fingerprinting
     Separate personas (different virtual machines for different identities)
 
 DATA PROTECTION
-
-Securely wipe unused disk space
-
-Use cryptsetup or Veracrypt for files and containers
-
-Remove EXIF metadata from files/images
-
+    Securely wipe unused disk space
+    Use cryptsetup or Veracrypt for files and containers
+    Remove EXIF metadata from files/images
     Clear memory caches, bash history, and logs
 
 OPSEC BEHAVIOR
-
-Never reuse usernames or data from your real identity
-
-Don’t login to personal accounts or use personal habits
-
-Always assume someone is watching: plan for metadata leaks
+    Never reuse usernames or data from your real identity
+    Don’t login to personal accounts or use personal habits
+    Always assume someone is watching: plan for metadata leaks

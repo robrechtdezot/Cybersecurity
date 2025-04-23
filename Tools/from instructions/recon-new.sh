@@ -47,3 +47,5 @@ echo -e "${GREEN}[+] Screenshots taken! ${RESET}"
 echo -e "${RED}[*] Running nmap on alive subdomains ... ${RESET}"
 nmap -iL $subdomain_path/alive.txt -p- -T4 -oA $scan_path/nmap.txt
 echo -e "${GREEN}[+] Nmap scan completed! ${RESET}"
+
+#port with exploit
